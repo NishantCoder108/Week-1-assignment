@@ -7,8 +7,27 @@
   - `npm run test-anagram`
 */
 
+//First Method
 function isAnagram(str1, str2) {
+  if (str1.length !== str2.length) return false;
 
+  let temp = false;
+  for (let i = 0; i < str1.length; i++) {
+    if (str1.includes(str2[i])) {
+      temp = true;
+    } else {
+      temp = false;
+    }
+  }
+  return temp;
 }
 
-module.exports = isAnagram;
+console.log(isAnagram("rasp", "spar"));
+// module.exports = isAnagram;
+
+/*Scenerio :
+ 1. first both string must have length will be same .
+ 2. check every letter is present to other .
+
+
+*/
