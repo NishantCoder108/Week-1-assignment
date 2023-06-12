@@ -22,7 +22,24 @@ function isAnagram(str1, str2) {
   return temp;
 }
 
+//Second Method
+function isAnagram2(str1, str2) {
+  if (str1.length !== str2.length) return false;
+
+  let temp = false;
+  for (let i = 0; i < str2.length; i++) {
+    if (str1.indexOf(str2[i] !== -1)) {
+      temp = true;
+    } else {
+      temp = false;
+    }
+  }
+  return temp;
+}
+
 console.log(isAnagram("rasp", "spar"));
+
+console.log(isAnagram2("rasp", "spdfar"));
 // module.exports = isAnagram;
 
 /*Scenerio :
